@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Mac 下 Nginx、PHP、MySQL 和 PHP-fpm 的安装和配置 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="安装 Mac 的包管理器 - homebrewhome-brew？home-brew与OS X就像nodes与npm，php与composer，apt-get与Ubutun，yum与centos 安装Homebrew之前，先安装xcode命令行工具 [php]xcode-select –install home-brew的安装很容易，只要你的客户终端安装了ruby即可，其实，你一点都不用担心此事，">
+<meta name="keywords" content="mac,nginx,php,mysql">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Mac 下 Nginx、PHP、MySQL 和 PHP-fpm 的安装和配置">
+<meta property="og:url" content="http://www.52niuniu.net/2017/09/04/lnmp/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="安装 Mac 的包管理器 - homebrewhome-brew？home-brew与OS X就像nodes与npm，php与composer，apt-get与Ubutun，yum与centos 安装Homebrew之前，先安装xcode命令行工具 [php]xcode-select –install home-brew的安装很容易，只要你的客户终端安装了ruby即可，其实，你一点都不用担心此事，">
+<meta property="og:updated_time" content="2017-09-04T15:17:52.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Mac 下 Nginx、PHP、MySQL 和 PHP-fpm 的安装和配置">
+<meta name="twitter:description" content="安装 Mac 的包管理器 - homebrewhome-brew？home-brew与OS X就像nodes与npm，php与composer，apt-get与Ubutun，yum与centos 安装Homebrew之前，先安装xcode命令行工具 [php]xcode-select –install home-brew的安装很容易，只要你的客户终端安装了ruby即可，其实，你一点都不用担心此事，">
+  
+    <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <div class="outer">
+        <section id="main"><article id="post-lnmp" class="article article-type-post" itemscope itemprop="blogPost">
+  
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Mac 下 Nginx、PHP、MySQL 和 PHP-fpm 的安装和配置
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      <a href="/2017/09/04/lnmp/" class="article-date">
+  <time datetime="2017-09-04T15:14:40.000Z" itemprop="datePublished">2017-09-04</time>
+</a>
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="安装-Mac-的包管理器-homebrew"><a href="#安装-Mac-的包管理器-homebrew" class="headerlink" title="安装 Mac 的包管理器 - homebrew"></a>安装 Mac 的包管理器 - homebrew</h3><p>home-brew？home-brew与OS X就像nodes与npm，php与composer，apt-get与Ubutun，yum与centos</p>
+<p>安装Homebrew之前，先安装xcode命令行工具</p>
+<p>[php]<br>xcode-select –install</p>
+<p>home-brew的安装很容易，只要你的客户终端安装了ruby即可，其实，你一点都不用担心此事，OS X系统已经预装了ruby。</p>
+<p>ruby -e “$(curl -fsSL <a href="https://raw.githubusercontent.com/Homebrew/install/master/install" target="_blank" rel="external">https://raw.githubusercontent.com/Homebrew/install/master/install</a>)”</p>
+<h3 id="安装-Nginx-服务器"><a href="#安装-Nginx-服务器" class="headerlink" title="安装 Nginx 服务器"></a>安装 Nginx 服务器</h3><p>安装好了Homebrew之后，便可以使用brew命令来安装相应的包了。接下来，安装nginx服务器。</p>
+<p>brew install nginx</p>
+
+      
+
+      
+        
+    </div>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2017/08/03/index/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">index</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        <aside id="sidebar">
+  <nav class="menus">
+  	<ul>
+  		<li><a href="/"><i class="icon icon-home"></i></a></li>
+  		
+			<li><a href="/archives"><i class="icon icon-fenlei"></i></a></li>
+  		
+  		
+			<li><a href="/tags"><i class="icon icon-tag"></i></a></li>
+  		
+  		
+  			<li><a href="https://github.com/hejianxian" target="_blank"><i class="icon icon-github"></i></a></li>
+  		
+  	</ul>
+  </nav>
+  <a id="go-top" href="#"><i class="icon icon-up"></i></a>
+</aside>
+
+      </div>
+      <footer id="footer">
+  
+	<div id="footer-info" class="inner">
+	  &copy; 2017 John Doe 
+	  - Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+	  - Theme <a href="https://github.com/hejianxian/hexo-theme-jane/" target="_blank">Jane</a>
+	</div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+    <a href="/tags" class="mobile-nav-link">Tag</a>
+  
+    <a href="https://github.com/hejianxian" class="mobile-nav-link">Github</a>
+  
+</nav>
+    
+
+<script src="//cdn.bootcss.com/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>

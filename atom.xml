@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.52niuniu.net/"/>
-  <updated>2017-08-03T03:21:42.000Z</updated>
+  <updated>2017-09-04T15:17:52.000Z</updated>
   <id>http://www.52niuniu.net/</id>
   
   <author>
@@ -14,6 +14,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Mac 下 Nginx、PHP、MySQL 和 PHP-fpm 的安装和配置</title>
+    <link href="http://www.52niuniu.net/2017/09/04/lnmp/"/>
+    <id>http://www.52niuniu.net/2017/09/04/lnmp/</id>
+    <published>2017-09-04T15:14:40.000Z</published>
+    <updated>2017-09-04T15:17:52.000Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="安装-Mac-的包管理器-homebrew"><a href="#安装-Mac-的包管理器-homebrew" class="headerlink" title="安装 Mac 的包管理器 - homebrew"></a>安装 Mac 的包管理器 - homebrew</h3><p>home-brew？home-brew与OS X就像nodes与npm，php与composer，apt-get与Ubutun，yum与centos</p>
+<p>安装Homebrew之前，先安装xcode命令行工具</p>
+<p>[php]<br>xcode-select –install</p>
+<p>home-brew的安装很容易，只要你的客户终端安装了ruby即可，其实，你一点都不用担心此事，OS X系统已经预装了ruby。</p>
+<p>ruby -e “$(curl -fsSL <a href="https://raw.githubusercontent.com/Homebrew/install/master/install" target="_blank" rel="external">https://raw.githubusercontent.com/Homebrew/install/master/install</a>)”</p>
+<h3 id="安装-Nginx-服务器"><a href="#安装-Nginx-服务器" class="headerlink" title="安装 Nginx 服务器"></a>安装 Nginx 服务器</h3><p>安装好了Homebrew之后，便可以使用brew命令来安装相应的包了。接下来，安装nginx服务器。</p>
+<p>brew install nginx</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;安装-Mac-的包管理器-homebrew&quot;&gt;&lt;a href=&quot;#安装-Mac-的包管理器-homebrew&quot; class=&quot;headerlink&quot; title=&quot;安装 Mac 的包管理器 - homebrew&quot;&gt;&lt;/a&gt;安装 Mac 的包管理器 - homebr
+    
+    </summary>
+    
+    
+      <category term="mac,nginx,php,mysql" scheme="http://www.52niuniu.net/tags/mac-nginx-php-mysql/"/>
+    
+  </entry>
   
   <entry>
     <title>index</title>
