@@ -52,11 +52,46 @@
       
         <h3 id="安装-Mac-的包管理器-homebrew"><a href="#安装-Mac-的包管理器-homebrew" class="headerlink" title="安装 Mac 的包管理器 - homebrew"></a>安装 Mac 的包管理器 - homebrew</h3><p>home-brew？home-brew与OS X就像nodes与npm，php与composer，apt-get与Ubutun，yum与centos</p>
 <p>安装Homebrew之前，先安装xcode命令行工具</p>
-<p>[php]<br>xcode-select –install</p>
+<blockquote>
+<p>xcode-select –install</p>
+</blockquote>
 <p>home-brew的安装很容易，只要你的客户终端安装了ruby即可，其实，你一点都不用担心此事，OS X系统已经预装了ruby。</p>
+<blockquote>
 <p>ruby -e “$(curl -fsSL <a href="https://raw.githubusercontent.com/Homebrew/install/master/install" target="_blank" rel="external">https://raw.githubusercontent.com/Homebrew/install/master/install</a>)”</p>
+</blockquote>
 <h3 id="安装-Nginx-服务器"><a href="#安装-Nginx-服务器" class="headerlink" title="安装 Nginx 服务器"></a>安装 Nginx 服务器</h3><p>安装好了Homebrew之后，便可以使用brew命令来安装相应的包了。接下来，安装nginx服务器。</p>
+<blockquote>
 <p>brew install nginx</p>
+</blockquote>
+<p>安装完成后执行下面几条命令测试一下</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">###### 启动 nginx服务</div><div class="line">sudo nginx</div><div class="line"># 重新加载配置|重启|停止|退出 nginx</div><div class="line">nginx -s reload|reopen|stop|quit</div><div class="line">#测试配置是否有语法错误</div><div class="line">nginx -t</div></pre></td></tr></table></figure>
+<p>nginx启动后，在浏览器中输入<a href="http://localhost:8080/,回车即可看到运行结果" target="_blank" rel="external">http://localhost:8080/,回车即可看到运行结果</a></p>
+<p>开机自启动nginx服务设置：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">mkdir -p ~/Library/LaunchAgents</div><div class="line">cp /usr/local/Cellar/nginx/1.10.0/homebrew.mxcl.nginx.plist ~/Library/LaunchAgents/</div><div class="line">launchctl load -w ~/Library/LaunchAgents/homebrew.mxcl.nginx.plist</div></pre></td></tr></table></figure></p>
+<p>nginx权限<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">sudo chown root:wheel /usr/local/Cellar/nginx/1.10.0/sbin/nginx</div><div class="line">sudo chmod u+s /usr/local/Cellar/nginx/1.10.0/sbin/nginx</div></pre></td></tr></table></figure></p>
+<h3 id="安装和配置-MySQL-服务器"><a href="#安装和配置-MySQL-服务器" class="headerlink" title="安装和配置 MySQL 服务器"></a>安装和配置 MySQL 服务器</h3><blockquote>
+<p>brew install mysql</p>
+</blockquote>
+<p>查看mysql数据库是否启动</p>
+<blockquote>
+<p>ps -ef | grep mysql</p>
+</blockquote>
+<p>如果没有启动，使用安装的mysql目录下的mysqld命令启动mysql：</p>
+<blockquote>
+<p>／usr/local/Cellar/mysql/5.7.12/bin/mysqld</p>
+</blockquote>
+<p>可直接使用/usr/local/bin/mysqld就可以启动</p>
+<blockquote>
+<p>which mysqld</p>
+</blockquote>
+<p>设置开机启动mysql</p>
+<blockquote>
+<p>mkdir -p ~/Library/LaunchAgents/<br>cp /usr/local/Cellar/mysql/5.7.12/homebrew.mxcl.mysql.plist ~/Library/LaunchAgents/<br>launchctl load -w ~/Library/LaunchAgents/homebrew.mxcl.mysql.plist</p>
+</blockquote>
+<h3 id="安装php56和php-fpm"><a href="#安装php56和php-fpm" class="headerlink" title="安装php56和php-fpm"></a>安装php56和php-fpm</h3><p>php的安装很简单，php－fpm目前已经集成到php的内核</p>
+<blockquote>
+<p>brew install php56 –with-imap –with-tidy –with-debug –with-pgsql –with-mysql –with-fpm</p>
+</blockquote>
+<p>安装php扩展<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">brew install php56-apcu php56-intl php56-redis php56-uuid php56-zookeeper</div><div class="line">    php56-thrift php56-solr php56-ssh2 php56-gmagick php56-kafka php56-libevent</div><div class="line">    php56-imagick php56-msgpack php56-geoip php56-mcrypt php56-swoole</div><div class="line">    php56-scrypt php56-xdebug php56-yaf php56-yaml php56-xhprof</div><div class="line">    php56-memcache php56-memcached php56-gearman</div></pre></td></tr></table></figure></p>
 
       
 
